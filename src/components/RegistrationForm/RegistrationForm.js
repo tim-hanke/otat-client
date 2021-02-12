@@ -12,14 +12,14 @@ export default class RegistrationForm extends Component {
 
   handleSubmit = async (ev) => {
     ev.preventDefault();
-    const { full_name, user_name, password } = ev.target;
+    const { email, phone, password } = ev.target;
 
     this.setState({ error: null });
 
     try {
       const user = await AuthApiService.postUser({
-        full_name: full_name.value,
-        user_name: user_name.value,
+        email: email.value,
+        phone: phone.value,
         password: password.value,
       });
       const res = await AuthApiService.postLogin({
@@ -27,8 +27,8 @@ export default class RegistrationForm extends Component {
         password: password.value,
       });
       TokenService.saveAuthToken(res.authToken);
-      full_name.value = "";
-      user_name.value = "";
+      email.value = "";
+      phone.value = "";
       password.value = "";
       this.props.onRegistrationSuccess();
     } catch (err) {
@@ -40,26 +40,26 @@ export default class RegistrationForm extends Component {
     const { error } = this.state;
     return (
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
-        <div className="full_name">
-          <label htmlFor="RegistrationForm__full_name">
-            Full name <Required />
+        <div className="email">
+          <label htmlFor="RegistrationForm__email">
+            Email <Required />
           </label>
           <Input
-            name="full_name"
-            type="text"
+            name="email"
+            type="email"
             required
-            id="RegistrationForm__full_name"
+            id="RegistrationForm__email"
           ></Input>
         </div>
-        <div className="user_name">
-          <label htmlFor="RegistrationForm__user_name">
-            User name/email <Required />
+        <div className="phone">
+          <label htmlFor="RegistrationForm__phone">
+            Phone Number <Required />
           </label>
           <Input
-            name="user_name"
-            type="text"
+            name="phone"
+            type="tel"
             required
-            id="RegistrationForm__user_name"
+            id="RegistrationForm__phone"
           ></Input>
         </div>
         <div className="password">

@@ -12,12 +12,12 @@ exports[`RegistrationPage component renders the UI as expected 1`] = `
     onSubmit={[Function]}
   >
     <div
-      className="full_name"
+      className="email"
     >
       <label
-        htmlFor="RegistrationForm__full_name"
+        htmlFor="RegistrationForm__email"
       >
-        Full name 
+        Email 
         <span
           className="Required "
         >
@@ -26,19 +26,19 @@ exports[`RegistrationPage component renders the UI as expected 1`] = `
       </label>
       <input
         className="Input "
-        id="RegistrationForm__full_name"
-        name="full_name"
+        id="RegistrationForm__email"
+        name="email"
         required={true}
-        type="text"
+        type="email"
       />
     </div>
     <div
-      className="user_name"
+      className="phone"
     >
       <label
-        htmlFor="RegistrationForm__user_name"
+        htmlFor="RegistrationForm__phone"
       >
-        User name/email 
+        Phone Number 
         <span
           className="Required "
         >
@@ -47,10 +47,10 @@ exports[`RegistrationPage component renders the UI as expected 1`] = `
       </label>
       <input
         className="Input "
-        id="RegistrationForm__user_name"
-        name="user_name"
+        id="RegistrationForm__phone"
+        name="phone"
         required={true}
-        type="text"
+        type="tel"
       />
     </div>
     <div

@@ -6,22 +6,23 @@ exports[`LoginForm component renders the UI as expected 1`] = `
   onSubmit={[Function]}
 >
   <p>
-    Demo account: demo/Pass123!
+    Demo account: demo@test.com/Pass123!
   </p>
   <div
-    className="user_name"
+    className="email"
   >
     <label
-      htmlFor="LoginForm__user_name"
+      htmlFor="LoginForm__email"
     >
-      User name
+      Email
     </label>
     <input
       className="Input "
-      id="LoginForm__user_name"
-      name="user_name"
-      placeholder="demo"
+      id="LoginForm__email"
+      name="email"
+      placeholder="demo@test.com"
       required={true}
+      type="email"
     />
   </div>
   <div

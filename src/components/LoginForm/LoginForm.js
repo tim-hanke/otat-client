@@ -13,14 +13,14 @@ export default class LoginForm extends Component {
   handleSubmitJwtAuth = (ev) => {
     ev.preventDefault();
     this.setState({ error: null });
-    const { user_name, password } = ev.target;
+    const { email, password } = ev.target;
 
     AuthApiService.postLogin({
-      user_name: user_name.value,
+      email: email.value,
       password: password.value,
     })
       .then((res) => {
-        user_name.value = "";
+        email.value = "";
         password.value = "";
         TokenService.saveAuthToken(res.authToken);
         this.props.onLoginSuccess();
@@ -34,14 +34,15 @@ export default class LoginForm extends Component {
     const { error } = this.state;
     return (
       <form className="LoginForm" onSubmit={this.handleSubmitJwtAuth}>
-        <p>Demo account: demo/Pass123!</p>
-        <div className="user_name">
-          <label htmlFor="LoginForm__user_name">User name</label>
+        <p>Demo account: demo@test.com/Pass123!</p>
+        <div className="email">
+          <label htmlFor="LoginForm__email">Email</label>
           <Input
             required
-            name="user_name"
-            id="LoginForm__user_name"
-            placeholder="demo"
+            type="email"
+            name="email"
+            id="LoginForm__email"
+            placeholder="demo@test.com"
           ></Input>
         </div>
         <div className="password">

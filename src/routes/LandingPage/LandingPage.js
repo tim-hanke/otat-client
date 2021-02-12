@@ -32,7 +32,7 @@ export default class LandingPage extends Component {
       }
       this.props.onLogin();
       const { location, history } = this.props;
-      const destination = (location.state || {}).from || "/articles";
+      const destination = (location.state || {}).from || "/";
       history.push(destination);
     } catch (err) {
       this.setState({ error: err.message });
