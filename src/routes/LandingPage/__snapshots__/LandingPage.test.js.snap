@@ -5,8 +5,14 @@ exports[`LandingPage component renders the UI as expected 1`] = `
   className="Section LandingPage"
 >
   <h2>
-    A place to store all the things you just don't have time to read now.
+    What's the one thing you'd like to remember about today?
   </h2>
+  <a
+    href="/login"
+    onClick={[Function]}
+  >
+    Login
+  </a>
   <a
     href="/register"
     onClick={[Function]}

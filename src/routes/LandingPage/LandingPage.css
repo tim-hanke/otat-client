@@ -3,7 +3,7 @@
 }
 
 .LandingPage a {
-  background: rgb(255, 121, 121);
+  background: rgb(0, 0, 0);
   color: white;
   padding: 5px 15px;
   border-radius: 15px;
@@ -22,11 +22,16 @@
 }
 
 .LandingPage__login {
-  background: rgb(255, 121, 121);
+  background: rgb(0, 0, 0);
   color: white;
   border: 0px;
   padding: 5px 15px;
   border-radius: 15px;
   margin-left: 10px;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.red {
+  color: red;
 }

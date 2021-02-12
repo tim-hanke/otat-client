@@ -43,9 +43,8 @@ export default class LandingPage extends Component {
     const { error } = this.state;
     return (
       <Section className="LandingPage">
-        <h2>
-          A place to store all the things you just don't have time to read now.
-        </h2>
+        <h2>What's the one thing you'd like to remember about today?</h2>
+        <Link to="/login">Login</Link>
         <Link to="/register">Register</Link>
         <p className="LandingPage__hint">
           Hint: you can also try out a demo account by clicking below!
