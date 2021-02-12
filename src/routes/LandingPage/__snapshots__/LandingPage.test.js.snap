@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage component renders the UI as expected 1`] = `
+<section
+  className="Section LandingPage"
+>
+  <h2>
+    A place to store all the things you just don't have time to read now.
+  </h2>
+  <a
+    href="/register"
+    onClick={[Function]}
+  >
+    Register
+  </a>
+  <p
+    className="LandingPage__hint"
+  >
+    Hint: you can also try out a demo account by clicking below!
+  </p>
+  <button
+    className="LandingPage__login"
+    onClick={[Function]}
+  >
+    Demo Login
+  </button>
+  <div
+    role="alert"
+  />
+</section>
+`;

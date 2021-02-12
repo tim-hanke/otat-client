@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationPage component renders the UI as expected 1`] = `
+<section
+  className="Section RegistrationPage"
+>
+  <h2>
+    Register
+  </h2>
+  <form
+    className="RegistrationForm"
+    onSubmit={[Function]}
+  >
+    <div
+      className="full_name"
+    >
+      <label
+        htmlFor="RegistrationForm__full_name"
+      >
+        Full name 
+        <span
+          className="Required "
+        >
+          *
+        </span>
+      </label>
+      <input
+        className="Input "
+        id="RegistrationForm__full_name"
+        name="full_name"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="user_name"
+    >
+      <label
+        htmlFor="RegistrationForm__user_name"
+      >
+        User name/email 
+        <span
+          className="Required "
+        >
+          *
+        </span>
+      </label>
+      <input
+        className="Input "
+        id="RegistrationForm__user_name"
+        name="user_name"
+        required={true}
+        type="text"
+      />
+    </div>
+    <div
+      className="password"
+    >
+      <label
+        htmlFor="RegistrationForm__password"
+      >
+        Password 
+        <span
+          className="Required "
+        >
+          *
+        </span>
+      </label>
+      <input
+        className="Input "
+        id="RegistrationForm__password"
+        name="password"
+        required={true}
+        type="password"
+      />
+    </div>
+    <div
+      role="alert"
+    />
+    <button
+      className="Button "
+      type="submit"
+    >
+      Register
+    </button>
+  </form>
+</section>
+`;

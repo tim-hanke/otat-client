@@ -1,0 +1,125 @@
+.ArticleListItem__container {
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ArticleListItem {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: smaller;
+  text-decoration: none;
+  box-shadow: 0px 5px 12px -1px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.4s ease-out;
+  border-radius: 10px;
+}
+
+.ArticleListItem__container:hover .ArticleListItem {
+  cursor: pointer;
+  box-shadow: 0px 8px 20px -1px rgba(0, 0, 0, 0.5);
+}
+
+.ArticleListItem,
+.ArticleListItem:visited {
+  color: #555;
+}
+
+.ArticleListItem__image {
+  height: 150px;
+  width: 275px;
+  border-radius: 10px 10px 0 0;
+  background-size: 100%;
+  transition: background-size 0.4s ease-out;
+  background-position: 50% 50%;
+}
+
+/* this does a small zoom in on the article image to
+create the illusion of the focused item coming towards the user */
+.ArticleListItem__container:hover .ArticleListItem__image {
+  background-size: 103%;
+}
+
+.ArticleListItem__delete {
+  background-color: #fff;
+  text-align: center;
+  height: 30px;
+  width: 34px;
+  border: 0px gray;
+  border-radius: 9px;
+  margin: 6px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.ArticleListItem__details {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 255px;
+  text-align: center;
+}
+
+.ArticleListItem__details h2 {
+  margin: 0;
+}
+
+/* a little animation that "jiggles" the element*/
+/* it goes back and forth, like in traditional animation */
+.jiggly:hover,
+.jiggly:focus {
+  -webkit-animation: jiggle-center 0.4s ease-in-out both;
+  animation: jiggle-center 0.4s ease-out both;
+}
+
+@-webkit-keyframes jiggle-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes jiggle-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  20% {
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+  }
+  40% {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}

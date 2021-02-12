@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddArticleForm component renders the UI as expected 1`] = `
+<form
+  className="AddArticleForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="url"
+  >
+    <label
+      htmlFor="AddArticleForm__url"
+    >
+      URL
+    </label>
+    <input
+      className="Input "
+      id="AddArticleForm__url"
+      name="url"
+      required={true}
+    />
+  </div>
+  <button
+    className="Button "
+    type="submit"
+  >
+    Submit URL
+  </button>
+</form>
+`;
