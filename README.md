@@ -8,7 +8,7 @@ This is the client side of One Thing About Today (OTAT), a minimalist journaling
 
 The server side repo is at [not yet]().
 
-The live version is hosted at [not yet]().
+The live version is hosted at [otat-client.vercel.app/](https://otat-client.vercel.app/).
 
 ## Why?
 
