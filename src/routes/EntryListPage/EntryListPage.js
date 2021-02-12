@@ -3,9 +3,9 @@ import ArticleListContext from "../../contexts/ArticleListContext";
 import ArticleApiService from "../../services/article-api-service";
 import { Section } from "../../components/Utils/Utils";
 import ArticleListItem from "../../components/ArticleListItem/ArticleListItem";
-import "./ArticleListPage.css";
+import "./EntryListPage.css";
 
-export default class ArticleListPage extends Component {
+export default class EntryListPage extends Component {
   static contextType = ArticleListContext;
 
   componentDidMount() {
@@ -25,7 +25,7 @@ export default class ArticleListPage extends Component {
   render() {
     const { error } = this.context;
     return (
-      <Section list className="ArticleListPage">
+      <Section list className="EntryListPage">
         {error ? (
           <p className="red">There was an error, try again</p>
         ) : (

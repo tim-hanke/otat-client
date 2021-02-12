@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
 import PrivateRoute from "../Utils/PrivateRoute";
 import PublicOnlyRoute from "../Utils/PublicOnlyRoute";
-import ArticleListPage from "../../routes/ArticleListPage/ArticleListPage";
+import EntryListPage from "../../routes/EntryListPage/EntryListPage";
 import LandingPage from "../../routes/LandingPage/LandingPage";
 import TokenService from "../../services/token-service";
 import LoginPage from "../../routes/LoginPage/LoginPage";
@@ -38,7 +38,7 @@ class App extends Component {
           )}
           <Switch>
             {this.state.isLoggedIn ? (
-              <Route exact path={"/"} component={ArticleListPage} />
+              <Route exact path={"/"} component={EntryListPage} />
             ) : (
               <PublicOnlyRoute
                 exact
@@ -57,7 +57,7 @@ class App extends Component {
               component={RegistrationPage}
               componentProps={{ onLogin: this.handleLogInLogOut }}
             />
-            <PrivateRoute path={"/articles"} component={ArticleListPage} />
+            <PrivateRoute path={"/articles"} component={EntryListPage} />
             <PrivateRoute path={"/addarticle"} component={AddArticlePage} />
             <Route component={NotFoundPage} />
           </Switch>
