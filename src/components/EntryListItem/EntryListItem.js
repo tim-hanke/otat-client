@@ -12,7 +12,7 @@ export default class EntryListItem extends Component {
   state = { error: null };
 
   handleClickDelete = async () => {
-    const { id } = this.props.article;
+    const { id } = this.props.entry;
 
     try {
       await EntryApiService.deleteUserArticle(id);
@@ -26,14 +26,14 @@ export default class EntryListItem extends Component {
   };
 
   render() {
-    const { article } = this.props;
+    const { entry } = this.props;
     const { error } = this.state;
 
     return (
       <div className="EntryListItem__container">
         <Link
           to={{
-            pathname: article.url,
+            pathname: entry.url,
           }}
           target="_blank"
           className="EntryListItem"
@@ -41,14 +41,14 @@ export default class EntryListItem extends Component {
         >
           <div
             className="EntryListItem__image"
-            style={{ backgroundImage: `url(${article.image})` }}
+            style={{ backgroundImage: `url(${entry.image})` }}
           />
 
           <div className="EntryListItem__details">
             <div className="EntryListItem__text">
-              <h2 className="EntryListItem__title">{article.title}</h2>
+              <h2 className="EntryListItem__title">{entry.title}</h2>
               <p className="EntryListItem__description">
-                {truncate(article.description)}
+                {truncate(entry.description)}
               </p>
             </div>
           </div>

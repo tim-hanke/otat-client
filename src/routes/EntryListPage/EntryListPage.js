@@ -19,7 +19,7 @@ export default class EntryListPage extends Component {
     const { entryList = [] } = this.context;
     return entryList
       .sort((a, b) => (a.id < b.id ? 1 : -1))
-      .map((article) => <EntryListItem key={article.id} article={article} />);
+      .map((entry) => <EntryListItem key={entry.id} entry={entry} />);
   }
 
   render() {
