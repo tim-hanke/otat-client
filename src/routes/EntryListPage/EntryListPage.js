@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ArticleListContext from "../../contexts/ArticleListContext";
-import ArticleApiService from "../../services/article-api-service";
+import EntryApiService from "../../services/entry-api-service";
 import { Section } from "../../components/Utils/Utils";
 import ArticleListItem from "../../components/ArticleListItem/ArticleListItem";
 import "./EntryListPage.css";
@@ -10,14 +10,14 @@ export default class EntryListPage extends Component {
 
   componentDidMount() {
     this.context.clearError();
-    ArticleApiService.getArticles()
+    EntryApiService.getEntries()
       .then(this.context.setArticleList)
       .catch(this.context.setError);
   }
 
   renderArticles() {
-    const { articleList = [] } = this.context;
-    return articleList
+    const { entryList = [] } = this.context;
+    return entryList
       .sort((a, b) => (a.id < b.id ? 1 : -1))
       .map((article) => <ArticleListItem key={article.id} article={article} />);
   }

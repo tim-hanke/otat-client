@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ArticleApiService from "../../services/article-api-service";
+import EntryApiService from "../../services/entry-api-service";
 import { Button, Input } from "../Utils/Utils";
 
 export default class AddArticleForm extends Component {
@@ -14,7 +14,7 @@ export default class AddArticleForm extends Component {
     this.setState({ error: null, isFetching: true });
     const { url } = ev.target;
 
-    ArticleApiService.postArticle(url.value)
+    EntryApiService.postArticle(url.value)
       .then((_res) => {
         url.value = "";
         this.props.onAddSuccess();

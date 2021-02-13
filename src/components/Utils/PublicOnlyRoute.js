@@ -4,7 +4,7 @@ import TokenService from "../../services/token-service";
 
 // if a logged in user attempts to access login or registration
 // routes, they are redirected to "/", which defaults to
-// the articleList
+// the entryList
 export default function PublicOnlyRoute({
   component,
   componentProps = {},

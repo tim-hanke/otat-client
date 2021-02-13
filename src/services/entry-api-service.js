@@ -1,9 +1,9 @@
 import TokenService from "./token-service";
 import { API_ENDPOINT } from "../config";
 
-const ArticleApiService = {
-  async getArticles() {
-    const res = await fetch(`${API_ENDPOINT}/articles`, {
+const EntryApiService = {
+  async getEntries() {
+    const res = await fetch(`${API_ENDPOINT}/entries`, {
       headers: {
         Authorization: `bearer ${TokenService.getAuthToken()}`,
       },
@@ -13,7 +13,7 @@ const ArticleApiService = {
       : res.json());
   },
   async postArticle(articleUrl) {
-    const res = await fetch(`${API_ENDPOINT}/articles/`, {
+    const res = await fetch(`${API_ENDPOINT}/entries/`, {
       headers: {
         Authorization: `bearer ${TokenService.getAuthToken()}`,
         "Content-Type": "application/json",
@@ -40,4 +40,4 @@ const ArticleApiService = {
   },
 };
 
-export default ArticleApiService;
+export default EntryApiService;

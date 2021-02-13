@@ -22,7 +22,7 @@ export default class LandingPage extends Component {
 
     try {
       const res = await AuthApiService.postLogin({
-        user_name: "demo",
+        email: "demo@test.com",
         password: "Pass123!",
       });
       if (res.authToken) {

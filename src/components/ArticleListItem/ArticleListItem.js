@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-regular-svg-icons";
-import ArticleApiService from "../../services/article-api-service";
+import EntryApiService from "../../services/entry-api-service";
 import "./ArticleListItem.css";
 import ArticleListContext from "../../contexts/ArticleListContext";
 
@@ -15,8 +15,8 @@ export default class ArticleListItem extends Component {
     const { id } = this.props.article;
 
     try {
-      await ArticleApiService.deleteUserArticle(id);
-      ArticleApiService.getArticles()
+      await EntryApiService.deleteUserArticle(id);
+      EntryApiService.getEntries()
         .then(this.context.setArticleList)
         .catch(this.context.setError);
       this.setState({ error: null });
