@@ -4,21 +4,9 @@ exports[`EntryListItem component renders the UI as expected 1`] = `
 <div
   className="EntryListItem__container"
 >
-  <a
+  <div
     className="EntryListItem"
-    href="https://www.test1.com"
-    onClick={[Function]}
-    rel="noopener noreferrer"
-    target="_blank"
   >
-    <div
-      className="EntryListItem__image"
-      style={
-        Object {
-          "backgroundImage": "url(http://placehold.it/500x500)",
-        }
-      }
-    />
     <div
       className="EntryListItem__details"
     >
@@ -28,7 +16,7 @@ exports[`EntryListItem component renders the UI as expected 1`] = `
         <h2
           className="EntryListItem__title"
         >
-          First test article!
+          2001-01-01
         </h2>
         <p
           className="EntryListItem__description"
@@ -37,7 +25,7 @@ exports[`EntryListItem component renders the UI as expected 1`] = `
         </p>
       </div>
     </div>
-  </a>
+  </div>
   <button
     aria-label="delete button"
     className="EntryListItem__delete jiggly"

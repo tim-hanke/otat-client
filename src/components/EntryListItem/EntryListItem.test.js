@@ -5,20 +5,19 @@ import renderer from "react-test-renderer";
 import EntryListItem from "./EntryListItem";
 
 describe.only("EntryListItem component", () => {
-  const testArticle = {
+  const testEntry = {
     id: 1,
-    url: "https://www.test1.com",
-    title: "First test article!",
-    image: "http://placehold.it/500x500",
-    description:
+    date_created: "2001-01-01",
+    text:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur deserunt commodi, nobis qui inventore corrupti iusto aliquid debitis unde non.Adipisci, pariatur.Molestiae, libero esse hic adipisci autem neque ?",
+    user_id: 1,
   };
 
   it("renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(
       <MemoryRouter>
-        <EntryListItem article={testArticle} />
+        <EntryListItem entry={testEntry} />
       </MemoryRouter>,
       div
     );
@@ -29,7 +28,7 @@ describe.only("EntryListItem component", () => {
     const tree = renderer
       .create(
         <MemoryRouter>
-          <EntryListItem article={testArticle} />
+          <EntryListItem entry={testEntry} />
         </MemoryRouter>
       )
       .toJSON();
