@@ -17,7 +17,7 @@ export default class ArticleListItem extends Component {
     try {
       await EntryApiService.deleteUserArticle(id);
       EntryApiService.getEntries()
-        .then(this.context.setArticleList)
+        .then(this.context.setEntryList)
         .catch(this.context.setError);
       this.setState({ error: null });
     } catch (res) {

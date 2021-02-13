@@ -5,7 +5,7 @@ const ArticleListContext = React.createContext({
   error: null,
   setError: () => {},
   clearError: () => {},
-  setArticleList: () => {},
+  setEntryList: () => {},
 });
 export default ArticleListContext;
 
@@ -15,7 +15,7 @@ export class ArticleListProvider extends Component {
     error: null,
   };
 
-  setArticleList = (entryList) => {
+  setEntryList = (entryList) => {
     this.setState({ entryList });
   };
 
@@ -34,7 +34,7 @@ export class ArticleListProvider extends Component {
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setArticleList: this.setArticleList,
+      setEntryList: this.setEntryList,
     };
     return (
       <ArticleListContext.Provider value={value}>

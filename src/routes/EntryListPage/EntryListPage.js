@@ -11,7 +11,7 @@ export default class EntryListPage extends Component {
   componentDidMount() {
     this.context.clearError();
     EntryApiService.getEntries()
-      .then(this.context.setArticleList)
+      .then(this.context.setEntryList)
       .catch(this.context.setError);
   }
 
