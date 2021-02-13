@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ArticleListItem component renders the UI as expected 1`] = `
+exports[`EntryListItem component renders the UI as expected 1`] = `
 <div
-  className="ArticleListItem__container"
+  className="EntryListItem__container"
 >
   <a
-    className="ArticleListItem"
+    className="EntryListItem"
     href="https://www.test1.com"
     onClick={[Function]}
     rel="noopener noreferrer"
     target="_blank"
   >
     <div
-      className="ArticleListItem__image"
+      className="EntryListItem__image"
       style={
         Object {
           "backgroundImage": "url(http://placehold.it/500x500)",
@@ -20,18 +20,18 @@ exports[`ArticleListItem component renders the UI as expected 1`] = `
       }
     />
     <div
-      className="ArticleListItem__details"
+      className="EntryListItem__details"
     >
       <div
-        className="ArticleListItem__text"
+        className="EntryListItem__text"
       >
         <h2
-          className="ArticleListItem__title"
+          className="EntryListItem__title"
         >
           First test article!
         </h2>
         <p
-          className="ArticleListItem__description"
+          className="EntryListItem__description"
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur deserunt commodi, nobis qui inventore corrupti iusto aliquid debitis unde non.Adipisci, pariatur.Molestiae, libero esse hic adipisci autem neque ?
         </p>
@@ -40,7 +40,7 @@ exports[`ArticleListItem component renders the UI as expected 1`] = `
   </a>
   <button
     aria-label="delete button"
-    className="ArticleListItem__delete jiggly"
+    className="EntryListItem__delete jiggly"
     onClick={[Function]}
     title="delete button"
   >

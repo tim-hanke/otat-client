@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { MemoryRouter } from "react-router-dom";
 import renderer from "react-test-renderer";
-import ArticleListItem from "./ArticleListItem";
+import EntryListItem from "./EntryListItem";
 
-describe.only("ArticleListItem component", () => {
+describe.only("EntryListItem component", () => {
   const testArticle = {
     id: 1,
     url: "https://www.test1.com",
@@ -18,7 +18,7 @@ describe.only("ArticleListItem component", () => {
     const div = document.createElement("div");
     ReactDOM.render(
       <MemoryRouter>
-        <ArticleListItem article={testArticle} />
+        <EntryListItem article={testArticle} />
       </MemoryRouter>,
       div
     );
@@ -29,7 +29,7 @@ describe.only("ArticleListItem component", () => {
     const tree = renderer
       .create(
         <MemoryRouter>
-          <ArticleListItem article={testArticle} />
+          <EntryListItem article={testArticle} />
         </MemoryRouter>
       )
       .toJSON();

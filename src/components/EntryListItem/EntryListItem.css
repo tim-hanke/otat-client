@@ -1,11 +1,11 @@
-.ArticleListItem__container {
+.EntryListItem__container {
   position: relative;
   margin-bottom: 40px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.ArticleListItem {
+.EntryListItem {
   background: none;
   display: flex;
   flex-direction: column;
@@ -17,17 +17,17 @@
   border-radius: 10px;
 }
 
-.ArticleListItem__container:hover .ArticleListItem {
+.EntryListItem__container:hover .EntryListItem {
   cursor: pointer;
   box-shadow: 0px 8px 20px -1px rgba(0, 0, 0, 0.5);
 }
 
-.ArticleListItem,
-.ArticleListItem:visited {
+.EntryListItem,
+.EntryListItem:visited {
   color: #555;
 }
 
-.ArticleListItem__image {
+.EntryListItem__image {
   height: 150px;
   width: 275px;
   border-radius: 10px 10px 0 0;
@@ -38,11 +38,11 @@
 
 /* this does a small zoom in on the article image to
 create the illusion of the focused item coming towards the user */
-.ArticleListItem__container:hover .ArticleListItem__image {
+.EntryListItem__container:hover .EntryListItem__image {
   background-size: 103%;
 }
 
-.ArticleListItem__delete {
+.EntryListItem__delete {
   background-color: #fff;
   text-align: center;
   height: 30px;
@@ -57,7 +57,7 @@ create the illusion of the focused item coming towards the user */
   cursor: pointer;
 }
 
-.ArticleListItem__details {
+.EntryListItem__details {
   padding: 10px;
   display: flex;
   flex: 1;
@@ -67,7 +67,7 @@ create the illusion of the focused item coming towards the user */
   text-align: center;
 }
 
-.ArticleListItem__details h2 {
+.EntryListItem__details h2 {
   margin: 0;
 }
 

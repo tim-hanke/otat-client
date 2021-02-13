@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 import EntryApiService from "../../services/entry-api-service";
-import "./ArticleListItem.css";
+import "./EntryListItem.css";
 import ArticleListContext from "../../contexts/ArticleListContext";
 
-export default class ArticleListItem extends Component {
+export default class EntryListItem extends Component {
   static contextType = ArticleListContext;
 
   state = { error: null };
@@ -30,24 +30,24 @@ export default class ArticleListItem extends Component {
     const { error } = this.state;
 
     return (
-      <div className="ArticleListItem__container">
+      <div className="EntryListItem__container">
         <Link
           to={{
             pathname: article.url,
           }}
           target="_blank"
-          className="ArticleListItem"
+          className="EntryListItem"
           rel="noopener noreferrer"
         >
           <div
-            className="ArticleListItem__image"
+            className="EntryListItem__image"
             style={{ backgroundImage: `url(${article.image})` }}
           />
 
-          <div className="ArticleListItem__details">
-            <div className="ArticleListItem__text">
-              <h2 className="ArticleListItem__title">{article.title}</h2>
-              <p className="ArticleListItem__description">
+          <div className="EntryListItem__details">
+            <div className="EntryListItem__text">
+              <h2 className="EntryListItem__title">{article.title}</h2>
+              <p className="EntryListItem__description">
                 {truncate(article.description)}
               </p>
             </div>
@@ -59,7 +59,7 @@ export default class ArticleListItem extends Component {
           )}
         </Link>
         <button
-          className="ArticleListItem__delete jiggly"
+          className="EntryListItem__delete jiggly"
           onClick={this.handleClickDelete}
           aria-label="delete button"
           title="delete button"
