@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 import EntryApiService from "../../services/entry-api-service";
@@ -31,25 +30,11 @@ export default class EntryListItem extends Component {
 
     return (
       <div className="EntryListItem__container">
-        <Link
-          to={{
-            pathname: entry.url,
-          }}
-          target="_blank"
-          className="EntryListItem"
-          rel="noopener noreferrer"
-        >
-          <div
-            className="EntryListItem__image"
-            style={{ backgroundImage: `url(${entry.image})` }}
-          />
-
+        <div className="EntryListItem">
           <div className="EntryListItem__details">
             <div className="EntryListItem__text">
-              <h2 className="EntryListItem__title">{entry.title}</h2>
-              <p className="EntryListItem__description">
-                {truncate(entry.description)}
-              </p>
+              <h2 className="EntryListItem__title">{entry.date_created}</h2>
+              <p className="EntryListItem__description">{entry.text}</p>
             </div>
           </div>
           {error && (
@@ -57,7 +42,7 @@ export default class EntryListItem extends Component {
               <p>{error}</p>
             </div>
           )}
-        </Link>
+        </div>
         <button
           className="EntryListItem__delete jiggly"
           onClick={this.handleClickDelete}
@@ -71,12 +56,12 @@ export default class EntryListItem extends Component {
   }
 }
 
-function truncate(text) {
-  const words = text.split(" ");
+// function truncate(text) {
+//   const words = text.split(" ");
 
-  if (words.length > 40) {
-    return words.slice(0, 40).join(" ") + " ...";
-  }
+//   if (words.length > 40) {
+//     return words.slice(0, 40).join(" ") + " ...";
+//   }
 
-  return text;
-}
+//   return text;
+// }
